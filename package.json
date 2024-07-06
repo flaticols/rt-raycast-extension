@@ -1,0 +1,65 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "radio-t",
+  "title": "Radio-T",
+  "description": "Radio-T extension",
+  "icon": "command-icon.svg",
+  "author": "denp",
+  "categories": [
+    "Media"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "rt",
+      "title": "Search episode",
+      "subtitle": "Radio-T",
+      "description": "Listen Radio-T episodes, search by show notes and listen live stream at Sartuday",
+      "mode": "view"
+    },
+    {
+      "name": "rt-toggle",
+      "title": "Play/Pause",
+      "subtitle": "Radio-T",
+      "description": "Listen Radio-T live stream",
+      "mode": "no-view"
+    },
+    {
+      "name": "rt-live",
+      "title": "Live Stream",
+      "subtitle": "Radio-T",
+      "description": "Listen Radio-T live stream",
+      "mode": "no-view"
+    },
+    {
+      "name": "rt-stop",
+      "title": "Stop",
+      "subtitle": "Radio-T",
+      "description": "Listen Radio-T live stream",
+      "mode": "no-view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.77.3",
+    "@raycast/utils": "^1.16.1",
+    "node-fetch": "^3.3.2",
+    "run-applescript": "^7.0.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/node": "20.8.10",
+    "@types/node-fetch": "^2.6.11",
+    "@types/react": "18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
